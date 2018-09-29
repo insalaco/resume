@@ -5,10 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |topic|
+  Topic.create!(title: "#{topic} Topic Name"
+  )
+end
+
 10.times do |blog|
   Blog.create!(
     title: "My blog post #{blog}.",
-    body: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words"
+    body: "Contrary to popular belief, Lorem Ipsum is not 
+    simply random text. It has roots in a piece of classical 
+    Latin literature from 45 BC, making it over 2000 years old. 
+    Richard McClintock, a Latin professor at Hampden-Sydney 
+    College in Virginia, looked up one of the more obscure 
+    Latin words",
+    topic_id: Topic.last.id
   )
 end
 
