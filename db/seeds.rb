@@ -12,7 +12,7 @@ end
 
 10.times do |blog|
   Blog.create!(
-    title: "My blog post #{blog}.",
+    title: "My blog post #{blog}",
     body: "Contrary to popular belief, Lorem Ipsum is not 
     simply random text. It has roots in a piece of classical 
     Latin literature from 45 BC, making it over 2000 years old. 
