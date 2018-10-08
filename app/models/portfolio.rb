@@ -6,7 +6,11 @@ class Portfolio < ApplicationRecord
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle = "Ruby on Rails") }
-
+  
+  def self.by_position
+    order("position ASC")
+  end
+  
   after_initialize :set_defaults
 
   def set_defaults
