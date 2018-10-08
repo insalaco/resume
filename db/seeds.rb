@@ -33,7 +33,7 @@ end
 9.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio Title #{portfolio_item}",
-    subtitle: "my great service",
+    subtitle: "Ruby on Rails",
     body: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
     main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/350x200"
