@@ -59,3 +59,7 @@ gem 'font-awesome-rails'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'bootstrap4-kaminari-views'
 gem 'jquery-ui-rails'
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'carrierwave-aws', '~> 1.0'
