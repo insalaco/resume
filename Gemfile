@@ -48,3 +48,4 @@ gem "mini_magick"
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'carrierwave-aws', '~> 1.0'
 gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.2'
