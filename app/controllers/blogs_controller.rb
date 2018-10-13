@@ -17,6 +17,11 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.friendly.find(params[:id])
+    else
+      redirect_to blogs_path, notice: "you are not authorized"
+    end
   end
 
   # GET /blogs/new
