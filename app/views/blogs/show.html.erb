@@ -1,10 +1,15 @@
 <div class="col-sm-8 blog-main">
   <h2><%= @blog.title %></h2>
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+
+  <ol class="breadcrumb">
+    <li class= "breadcrumb-item"><%= link_to "Home", root_path %></li>
+    <li class="breadcrumb-item"> <%= link_to @blog.topic.title, topic_path(@blog.topic) %></li>
+    <li class="breadcrumb-item active"> <%= @blog.title %></li> 
+    <li class="ml-2"><%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %></li>
+    <li class="ml-1"><%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'are you sure?' } if logged_in?(:site_admin) %></li>
+  </ol>
   <p><%= @blog.topic.title %></p>
-  <p>
-    <%= @blog.body %>
-  </p>
+  <p><%= markdown @blog.body %></p>
 </div>
 
 
